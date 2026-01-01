@@ -1,6 +1,6 @@
 [build]
   base = "."
-  command = "pnpm install --frozen-lockfile && pnpm run build -- --webpack"
+  command = "pnpm install --frozen-lockfile && pnpm run build"
   publish = ".next"
 
 [build.environment]
