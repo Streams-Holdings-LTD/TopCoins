@@ -11,20 +11,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  turbopack: {
-    // Avoid bundling server-only logging transports and their test fixtures
-    resolveAlias: {
-      pino: 'pino/browser',
-      'thread-stream': threadStreamStub,
-      '@base-org/account': emptyModule,
-      '@coinbase/wallet-sdk': emptyModule,
-      '@gemini-wallet/core': emptyModule,
-      porto: emptyModule,
-      'porto/internal': emptyModule,
-      '@safe-global/safe-apps-sdk': emptyModule,
-      '@safe-global/safe-apps-provider': emptyModule,
-    },
-  },
   webpack: (config) => {
     config.resolve = config.resolve || {}
     config.resolve.alias = {
